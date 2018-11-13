@@ -1,23 +1,69 @@
 @import (less) '../../node_modules/normalize.css/normalize.css';
 @import (less) '_media.less';
 
-body {
-    background: blue;
+body{
+     font-family: 'Roboto', sans-serif;
+     font-weight: 400;
 }
 
+
+.container{
+    width: 1280px;
+    margin: 0 auto;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  width: 100%;
+  clear: both;
+}
+.link-style{
+    cursor: pointer;
+    position: relative;  
+    color: red;
+    text-decoration: none;
+    font-size: 17px;     
+    
+}
+.link-style-after{
+    content:"";
+        position: absolute;
+        background: red;
+        border: solid 0.4px red;
+        top:100%;
+        left: 0;
+        width: 100%;
+        height: 0.5px;
+}
+
+.display-flex{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+
+
+@desktop: (min-width:1024px);
+@tablet:(min-width:768px);
+@mobile:(min-width: 320px) and (max-width: 767px);
 // Стили для всех девайсов (все @media-запросы) пишутся внитри блока
-.menu {
-    margin: 0;
-    padding: 0;
+.header {
+    width: 98%;
+    margin: 0 auto;
     text-align: center;
-    background: red;
+    
+    
 
     @media @tablet {
-        background: green;
+        
     }
 
     @media @desktop {
-        background: blue;
+       
+    }
+     @media only screen and @mobile {
+       
     }
 
     // Пример стилей для элемента `.menu__item`
@@ -36,3 +82,105 @@ body {
         color: #f00;
     }
 }
+
+
+
+.logo {
+    padding: 0;
+    color: red;
+    
+    &_display{
+         .display-flex
+    }
+
+    &__oggeto{
+        height: 50px;
+        background: red;
+        border-radius: 51%;
+       
+    }
+
+
+}
+
+.nav{
+   
+    height: 50px;
+    border-style: solid;
+    border-width:1px;
+    border-color: rgba(128, 128, 128, 0.25);
+    border-right: none;
+    border-left: none;
+   /*  border: solid 0.4px rgba(128, 128, 128, 0.25); */
+    
+
+
+    &_display li{
+        display: inline-block;
+        float: left;
+        margin-right: 20px;
+
+
+
+    }
+    &__link {
+        padding: 0;
+        margin: 8.5px 0;
+
+
+    }
+    &__link a{
+        .link-style
+       /*  cursor: pointer;
+       position: relative;  
+       color: red;
+       text-decoration: none;
+       font-size: 17px;     
+       font-weight: 400; */
+}
+ 
+     
+    &__link a:after{
+        .link-style-after
+       /*  content:"";
+       position: absolute;
+       background: red;
+       border: solid 0.4px red;
+       top:100%;
+       left: 0;
+       width: 100%;
+       height: 0.5px; */
+    }
+}
+
+
+.item{
+    .display-flex
+}
+.breadcrumbs{
+    padding: 0;
+    margin: 10px 0 15px;
+}
+
+.breadcrumbs a{
+   .link-style
+}
+
+
+
+
+.breadcrumbs a:after{
+    .link-style-after
+}
+
+.item__img{
+    position: relative;
+}
+
+.item__img img{
+    position: absolute;
+}
+
+/* .on-top{
+    z-index: 100;
+} */

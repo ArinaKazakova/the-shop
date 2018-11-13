@@ -7,16 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 <body>
 
-<!-- Код для примера -->
-<header class="header">
-    <h1>Hello world</h1>
-    <p style="color: white">Hello from Travis!</p>
-</header>
+    <!-- Код для примера -->
+    <header class="header">
+    	<div class="container">
+    	    <ul class="logo logo_display ">
+    	    	<li class="logo__shop"><a href="#"><img src="img/the_shop_logo.svg" width="100px" height="70px" alt=""></a></li>
+    	    	<li class="logo__oggeto"><img src="img/oggetto_logo.svg" width="50px" height="50px" alt=""></li>
+    	    	<li class="logo__number">+7(812)2-12-85-06</li>
+    	    </ul>
+            
+        </div>
+        <nav class="nav nav_display">
+            <div class="container">
+                <ul class="nav__link clearfix">
+                    <li "><a href="#">LISP</a></li>
+                    <li><a href="#">OCaml</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </div>
+            </nav>
+    </header>
 
-<img src="img/pic.png" alt="">
+    <section id="product">
+        <div class="container">
+            <p class="breadcrumbs"><a   href="#">LISP</a> <a   href="#">Одежда</a>  <a   href="#">Футболки</a></p>
+            <div class="item">
+                <div class="item__img">
+                    <img width="700px" src="img/t-shirts.png" alt="">
+                    <img width="700px" src="img/t-shirt_green.png" alt="">
+                    <img width="700px" src="img/t-shirt_white.png" alt="">
+                </div>
+                <div class="item__description">
+                    <h2>Футболка Alien technology</h2>
+                    <p>Состав: 100% хлопок, динамическая типизация, польская нотация. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <footer class="footer">
 </footer>
