@@ -369,12 +369,12 @@ hr{
 }
 
 .icons{
-   
+   min-width: 320px;
     margin-top: 10px;
     margin-bottom: 38px;
     position: relative;
     @media  @mobile {
-        text-align: left;
+        text-align: center;
     }
 
     & img {
@@ -385,11 +385,16 @@ hr{
 
 .icons a{
     margin: 40px;
+    padding-left:0px;
+    text-align: right;
 }
 
 .heart{
     margin-top: 30px;
     margin-left: -2px;
+     @media  @mobile {
+        margin-left: -20px;
+    }
 
 
 }
@@ -397,6 +402,9 @@ hr{
 .cup{
     margin-top: 50px;
     margin-left: 1px;
+    @media  @mobile {
+        margin-left: -13px;
+    }
 }
 
 .social li{
